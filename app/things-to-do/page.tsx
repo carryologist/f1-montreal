@@ -1,227 +1,107 @@
 export default function ThingsToDo() {
   return (
-    <div className="space-y-8">
-      {/* Page Header */}
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mclaren-gradient-text mb-4">Things to Do</h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Montreal offers incredible experiences, from F1 race activities to exploring 
-          this vibrant city&apos;s culture, cuisine, and attractions.
+    <div className="max-w-4xl mx-auto space-y-8">
+      <div className="text-center space-y-4">
+        <h1 className="text-3xl font-bold mclaren-gradient-text">Things to Do</h1>
+        <p className="text-lg text-gray-300">
+          We&apos;ll curate activities, restaurants, and day trips in Montreal for our F1 weekend.
         </p>
       </div>
 
+      {/* Montreal Hero Image */}
+      <div className="relative h-64 rounded-lg overflow-hidden">
+        <div 
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://oranatravel.com/wp-content/uploads/2018/10/montreal-title-page.jpg')`
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h2 className="text-3xl font-bold text-white text-center">Discover Beautiful Montreal</h2>
+        </div>
+      </div>
+
       {/* F1 Race Weekend */}
-      <div className="mclaren-card relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10"></div>
-        <div className="relative z-10">
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">
-              🏁
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mclaren-gradient-text">F1 Race Weekend</h2>
-              <p className="text-gray-400">The main event at Circuit Gilles Villeneuve</p>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                  🏁
-                </div>
-                <span className="text-gray-300">Practice sessions (Friday & Saturday)</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                  ⚡
-                </div>
-                <span className="text-gray-300">Qualifying session (Saturday)</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                  🏆
-                </div>
-                <span className="text-gray-300">Canadian Grand Prix race (Sunday)</span>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                  🚶
-                </div>
-                <span className="text-gray-300">Paddock tours and pit lane walks (if available)</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                  🎉
-                </div>
-                <span className="text-gray-300">F1 Fan Zone activities</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                  ✍️
-                </div>
-                <span className="text-gray-300">Driver meet &amp; greets</span>
-              </div>
-            </div>
-          </div>
+      <div className="mclaren-card space-y-4">
+        <h2 className="text-xl font-bold mclaren-gradient-text text-center">F1 Race Weekend</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <ul className="space-y-2 text-gray-300">
+            <li>• Practice sessions (Friday & Saturday)</li>
+            <li>• Qualifying session (Saturday)</li>
+            <li>• Canadian Grand Prix race (Sunday)</li>
+          </ul>
+          <ul className="space-y-2 text-gray-300">
+            <li>• Paddock tours and pit lane walks (if available)</li>
+            <li>• F1 Fan Zone activities</li>
+            <li>• Driver meet & greets</li>
+          </ul>
         </div>
       </div>
 
       {/* Montreal Attractions */}
-      <div className="mclaren-card">
-        <div className="flex items-center space-x-4 mb-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-            🏙️
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-white">Montreal Attractions</h2>
-            <p className="text-gray-400">Explore the beautiful city of Montreal</p>
-          </div>
-        </div>
+      <div className="mclaren-card space-y-6">
+        <h2 className="text-xl font-bold text-white text-center">Montreal Attractions</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-4">
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">🏰 Old Montreal (Vieux-Montréal)</h3>
-              <p className="text-gray-400 text-sm">Cobblestone streets and historic architecture</p>
-            </div>
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">⛪ Notre-Dame Basilica</h3>
-              <p className="text-gray-400 text-sm">Stunning Gothic Revival architecture</p>
-            </div>
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">🏔️ Mount Royal Park</h3>
-              <p className="text-gray-400 text-sm">Panoramic city views from the mountain</p>
-            </div>
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">🎨 Montreal Museum of Fine Arts</h3>
-              <p className="text-gray-400 text-sm">World-class art collections and exhibitions</p>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <div 
+                className="w-full h-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltfdd6c97efcd586d1/67d1e85da4b93f29fd09bcd0/montreal-4113307-Header_Desktop.jpg')`
+                }}
+              />
+              <div className="absolute inset-0 bg-black/30 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-white font-bold text-lg">Old Montreal</h3>
+                  <p className="text-gray-200 text-sm">Historic cobblestone streets</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="space-y-4">
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">🏟️ Biodome and Olympic Stadium</h3>
-              <p className="text-gray-400 text-sm">Unique ecosystems and 1976 Olympics venue</p>
-            </div>
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">🍅 Jean-Talon Market</h3>
-              <p className="text-gray-400 text-sm">Local foods, produce, and Quebec specialties</p>
-            </div>
-            <div className="mclaren-section">
-              <h3 className="text-lg font-semibold text-white mb-2">🚇 Underground City (RESO)</h3>
-              <p className="text-gray-400 text-sm">Extensive underground network of shops and tunnels</p>
-            </div>
+          <div className="space-y-3">
+            <ul className="space-y-2 text-gray-300">
+              <li>• Old Montreal (Vieux-Montréal) - cobblestone streets and historic architecture</li>
+              <li>• Notre-Dame Basilica - stunning Gothic Revival architecture</li>
+              <li>• Mount Royal Park - panoramic city views</li>
+              <li>• Montreal Museum of Fine Arts</li>
+              <li>• Biodome and Olympic Stadium</li>
+              <li>• Jean-Talon Market - local foods and produce</li>
+              <li>• Underground City (RESO) - extensive underground network</li>
+            </ul>
           </div>
         </div>
       </div>
 
       {/* Food & Drink */}
-      <div className="mclaren-card relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-blue-500/10"></div>
-        <div className="relative z-10">
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-              🍽️
+      <div className="mclaren-card space-y-4">
+        <h2 className="text-xl font-bold text-white text-center">Food & Drink</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-3">
+            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto">
+              <span className="text-2xl">🍟</span>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-white">Food & Drink</h2>
-              <p className="text-gray-400">Montreal&apos;s incredible culinary scene</p>
-            </div>
+            <h3 className="text-center font-semibold text-white">Must-Try Montreal Foods</h3>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="mclaren-section">
-                <h3 className="text-lg font-semibold text-white mb-2">🍟 Poutine</h3>
-                <p className="text-gray-400 text-sm">La Banquise or Chez Claudette for authentic poutine</p>
-              </div>
-              <div className="mclaren-section">
-                <h3 className="text-lg font-semibold text-white mb-2">🥯 Montreal-style Bagels</h3>
-                <p className="text-gray-400 text-sm">St-Viateur or Fairmount for the best bagels</p>
-              </div>
-              <div className="mclaren-section">
-                <h3 className="text-lg font-semibold text-white mb-2">🥩 Smoked Meat</h3>
-                <p className="text-gray-400 text-sm">Schwartz&apos;s Deli for legendary smoked meat sandwiches</p>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="mclaren-section">
-                <h3 className="text-lg font-semibold text-white mb-2">🍺 Craft Breweries</h3>
-                <p className="text-gray-400 text-sm">Mile End and Plateau neighborhoods</p>
-              </div>
-              <div className="mclaren-section">
-                <h3 className="text-lg font-semibold text-white mb-2">🍷 French Cuisine</h3>
-                <p className="text-gray-400 text-sm">Fine dining restaurants in Old Montreal</p>
-              </div>
-              <div className="mclaren-section">
-                <h3 className="text-lg font-semibold text-white mb-2">🍁 Sugar Shacks</h3>
-                <p className="text-gray-400 text-sm">Cabanes à sucre for maple syrup treats</p>
-              </div>
-            </div>
-          </div>
+          <ul className="space-y-2 text-gray-300">
+            <li>• Poutine at La Banquise or Chez Claudette</li>
+            <li>• Montreal-style bagels at St-Viateur or Fairmount</li>
+            <li>• Smoked meat at Schwartz&apos;s Deli</li>
+            <li>• Craft breweries in Mile End and Plateau neighborhoods</li>
+            <li>• French cuisine in Old Montreal</li>
+            <li>• Sugar shacks (cabanes à sucre) for maple syrup treats</li>
+          </ul>
         </div>
       </div>
 
       {/* Day Trips */}
-      <div className="mclaren-card">
-        <div className="flex items-center space-x-4 mb-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
-            🚗
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-white">Day Trips</h2>
-            <p className="text-gray-400">Explore beyond Montreal</p>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="mclaren-section">
-            <h3 className="text-lg font-semibold text-white mb-2">🏰 Quebec City</h3>
-            <p className="text-gray-400 text-sm mb-2">3-hour drive • European charm and history</p>
-            <div className="flex space-x-2">
-              <span className="inline-flex items-center px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-400 text-xs">
-                Historic
-              </span>
-              <span className="inline-flex items-center px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-400 text-xs">
-                UNESCO Site
-              </span>
-            </div>
-          </div>
-          <div className="mclaren-section">
-            <h3 className="text-lg font-semibold text-white mb-2">🏤 Ottawa</h3>
-            <p className="text-gray-400 text-sm mb-2">2-hour drive • Canada&apos;s capital city</p>
-            <div className="flex space-x-2">
-              <span className="inline-flex items-center px-2 py-1 bg-red-500/20 border border-red-500/30 rounded text-red-400 text-xs">
-                Parliament
-              </span>
-              <span className="inline-flex items-center px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-400 text-xs">
-                Museums
-              </span>
-            </div>
-          </div>
-          <div className="mclaren-section">
-            <h3 className="text-lg font-semibold text-white mb-2">🏔️ Laurentian Mountains</h3>
-            <p className="text-gray-400 text-sm mb-2">Scenic drives and outdoor activities</p>
-            <div className="flex space-x-2">
-              <span className="inline-flex items-center px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-400 text-xs">
-                Nature
-              </span>
-              <span className="inline-flex items-center px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-400 text-xs">
-                Hiking
-              </span>
-            </div>
-          </div>
-          <div className="mclaren-section">
-            <h3 className="text-lg font-semibold text-white mb-2">🍇 Eastern Townships</h3>
-            <p className="text-gray-400 text-sm mb-2">Wine country and charming villages</p>
-            <div className="flex space-x-2">
-              <span className="inline-flex items-center px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-400 text-xs">
-                Wineries
-              </span>
-              <span className="inline-flex items-center px-2 py-1 bg-orange-500/20 border border-orange-500/30 rounded text-orange-400 text-xs">
-                Scenic
-              </span>
-            </div>
-          </div>
-        </div>
+      <div className="mclaren-card space-y-4">
+        <h2 className="text-xl font-bold text-white text-center">Day Trips</h2>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Quebec City (3-hour drive) - European charm and history</li>
+          <li>• Ottawa (2-hour drive) - Canada&apos;s capital city</li>
+          <li>• Laurentian Mountains - scenic drives and outdoor activities</li>
+          <li>• Eastern Townships - wine country and charming villages</li>
+        </ul>
       </div>
     </div>
   );

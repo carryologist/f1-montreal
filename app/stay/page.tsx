@@ -1,123 +1,76 @@
 export default function StayInfo() {
   return (
-    <div className="space-y-8">
-      {/* Page Header */}
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mclaren-gradient-text mb-4">Stay Info</h1>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-          Accommodation details for our Montreal F1 Grand Prix weekend
+    <div className="max-w-3xl mx-auto space-y-8">
+      <div className="text-center space-y-4">
+        <h1 className="text-3xl font-bold mclaren-gradient-text">Stay Info</h1>
+        <p className="text-lg text-gray-300">We&apos;re staying May 21–24, 2026 for the Montreal F1 Grand Prix.</p>
+      </div>
+      
+      {/* Circuit Hero Image */}
+      <div className="relative h-48 rounded-lg overflow-hidden">
+        <div 
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp')`
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-white mb-2">Circuit Gilles Villeneuve</h2>
+            <p className="text-gray-200">Our F1 destination on Île Notre-Dame</p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Hotel Status */}
+      <div className="mclaren-card text-center space-y-4">
+        <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto">
+          <span className="text-2xl">🏨</span>
+        </div>
+        <div className="inline-flex items-center px-4 py-2 bg-yellow-500/20 border border-yellow-500/30 rounded-lg text-yellow-400 text-sm font-medium">
+          ⚠️ Hotel Booking Pending
+        </div>
+        <p className="text-gray-300">
+          We haven&apos;t booked our hotel yet. Once confirmed, we&apos;ll add the hotel details, 
+          address, check-in/out times, and any relevant information here.
         </p>
-      </div>
-      
-      {/* Trip Dates */}
-      <div className="mclaren-card text-center">
-        <div className="flex items-center justify-center space-x-4 mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-            📅
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-white">Trip Dates</h2>
-            <p className="text-gray-400">F1 Race Weekend</p>
-          </div>
-        </div>
-        <p className="text-3xl font-bold mclaren-gradient-text">May 21–24, 2026</p>
-        <p className="text-gray-300 mt-2">4 days, 3 nights in beautiful Montreal</p>
-      </div>
-      
-      {/* Hotel Booking Status */}
-      <div className="mclaren-card relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-orange-500/10"></div>
-        <div className="relative z-10">
-          <div className="flex items-start space-x-4">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              🏨
-            </div>
-            <div className="flex-1">
-              <h2 className="text-2xl font-bold text-white mb-2">Hotel Booking Status</h2>
-              <div className="inline-flex items-center px-3 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded-full text-yellow-400 text-sm font-medium mb-4">
-                ⚠️ Pending Booking
-              </div>
-              <p className="text-gray-300 leading-relaxed">
-                We haven&apos;t finalized our hotel booking yet. Once we&apos;ve secured our accommodation, 
-                all the details will be updated here including address, check-in procedures, and amenities.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       
       {/* What We'll Include */}
-      <div className="mclaren-card">
-        <h2 className="text-2xl font-bold mclaren-gradient-text mb-6">What We&apos;ll Include Once Booked</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center">
-                🏨
-              </div>
-              <span className="text-gray-300">Hotel name and booking confirmation</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center">
-                🗺️
-              </div>
-              <span className="text-gray-300">Address and directions from airport</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center">
-                🕐
-              </div>
-              <span className="text-gray-300">Check-in and check-out times</span>
-            </div>
+      <div className="mclaren-card space-y-4">
+        <div className="text-center space-y-3">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto">
+            <span className="text-2xl">📋</span>
           </div>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center">
-                📶
-              </div>
-              <span className="text-gray-300">Wi-Fi network and password</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center">
-                🅿️
-              </div>
-              <span className="text-gray-300">Parking availability and costs</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center">
-                ✨
-              </div>
-              <span className="text-gray-300">Hotel amenities and policies</span>
-            </div>
-          </div>
+          <h2 className="text-xl font-bold text-white">What we&apos;ll add once booked:</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <ul className="space-y-2 text-gray-300">
+            <li>• Hotel name and booking confirmation</li>
+            <li>• Address and directions</li>
+            <li>• Check-in/check-out times</li>
+          </ul>
+          <ul className="space-y-2 text-gray-300">
+            <li>• Wi-Fi information</li>
+            <li>• Parking details</li>
+            <li>• Hotel amenities and policies</li>
+          </ul>
         </div>
       </div>
       
-      {/* Circuit Distance */}
-      <div className="mclaren-card">
-        <div className="flex items-center space-x-4 mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">
-            🏁
+      {/* Montreal Skyline */}
+      <div className="relative h-48 rounded-lg overflow-hidden">
+        <div 
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://skylinespace.nyc3.cdn.digitaloceanspaces.com/media/images/cat_banners/cat_topbanner_montreal.jpg')`
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-2">Beautiful Montreal</h3>
+            <p className="text-gray-200">Your F1 weekend destination</p>
           </div>
-          <div>
-            <h2 className="text-2xl font-bold text-white">Circuit Gilles Villeneuve</h2>
-            <p className="text-gray-400">Race Venue Location</p>
-          </div>
-        </div>
-        <p className="text-gray-300 mb-4">
-          The circuit is located on Île Notre-Dame in Montreal. We&apos;ll provide detailed 
-          transportation options and directions to the track once our hotel is confirmed.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <span className="inline-flex items-center px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm">
-            🚇 Metro Access
-          </span>
-          <span className="inline-flex items-center px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm">
-            🚕 Taxi/Uber Available
-          </span>
-          <span className="inline-flex items-center px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-sm">
-            🚶 Walking Distance from Metro
-          </span>
         </div>
       </div>
     </div>
