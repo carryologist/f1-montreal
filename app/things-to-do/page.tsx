@@ -1,107 +1,96 @@
 export default function ThingsToDo() {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="container space-y-8 animate-fade-in">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold mclaren-gradient-text">Things to Do</h1>
-        <p className="text-lg text-gray-300">
-          We&apos;ll curate activities, restaurants, and day trips in Montreal for our F1 weekend.
+        <div className="badge badge-primary mb-4">🎆 Things to Do</div>
+        <h1 className="font-display text-4xl sm:text-5xl font-bold mb-4">
+          Montreal <span className="text-gradient">Adventures</span>
+        </h1>
+        <p className="text-lg opacity-75 max-w-2xl mx-auto">
+          Discover the best of Montreal during your F1 weekend - from iconic attractions to local favorites.
         </p>
       </div>
-
-      {/* Montreal Hero Image */}
-      <div className="relative h-64 rounded-lg overflow-hidden">
-        <div 
-          className="w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://oranatravel.com/wp-content/uploads/2018/10/montreal-title-page.jpg')`
-          }}
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h2 className="text-3xl font-bold text-white text-center">Discover Beautiful Montreal</h2>
-        </div>
-      </div>
-
-      {/* F1 Race Weekend */}
-      <div className="mclaren-card space-y-4">
-        <h2 className="text-xl font-bold mclaren-gradient-text text-center">F1 Race Weekend</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <ul className="space-y-2 text-gray-300">
-            <li>• Practice sessions (Friday & Saturday)</li>
-            <li>• Qualifying session (Saturday)</li>
-            <li>• Canadian Grand Prix race (Sunday)</li>
-          </ul>
-          <ul className="space-y-2 text-gray-300">
-            <li>• Paddock tours and pit lane walks (if available)</li>
+      
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* F1 & Racing */}
+        <div className="card">
+          <div className="card-icon card-icon-f1">
+            🏁
+          </div>
+          <h3 className="font-display text-xl font-semibold mb-3">
+            F1 & Racing
+          </h3>
+          <ul className="space-y-2 opacity-75">
+            <li>• Circuit Gilles Villeneuve tours</li>
             <li>• F1 Fan Zone activities</li>
-            <li>• Driver meet & greets</li>
+            <li>• Racing simulators downtown</li>
+            <li>• F1 merchandise shopping</li>
+          </ul>
+        </div>
+        
+        {/* Montreal Attractions */}
+        <div className="card">
+          <div className="card-icon card-icon-f1">
+            🍁
+          </div>
+          <h3 className="font-display text-xl font-semibold mb-3">
+            Montreal Attractions
+          </h3>
+          <ul className="space-y-2 opacity-75">
+            <li>• Old Montreal (Vieux-Montréal)</li>
+            <li>• Notre-Dame Basilica</li>
+            <li>• Mount Royal Park</li>
+            <li>• Montreal Museum of Fine Arts</li>
+          </ul>
+        </div>
+        
+        {/* Food & Drink */}
+        <div className="card">
+          <div className="card-icon card-icon-f1">
+            🍽️
+          </div>
+          <h3 className="font-display text-xl font-semibold mb-3">
+            Food & Drink
+          </h3>
+          <ul className="space-y-2 opacity-75">
+            <li>• Poutine at La Banquise</li>
+            <li>• Smoked meat at Schwartz&apos;s</li>
+            <li>• Bagels at St-Viateur or Fairmount</li>
+            <li>• Craft breweries in Mile End</li>
+          </ul>
+        </div>
+        
+        {/* Entertainment */}
+        <div className="card">
+          <div className="card-icon card-icon-f1">
+            🎭
+          </div>
+          <h3 className="font-display text-xl font-semibold mb-3">
+            Entertainment
+          </h3>
+          <ul className="space-y-2 opacity-75">
+            <li>• F1 weekend parties and events</li>
+            <li>• Crescent Street nightlife</li>
+            <li>• Casino de Montréal</li>
+            <li>• Live music venues</li>
           </ul>
         </div>
       </div>
-
-      {/* Montreal Attractions */}
-      <div className="mclaren-card space-y-6">
-        <h2 className="text-xl font-bold text-white text-center">Montreal Attractions</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="relative h-48 rounded-lg overflow-hidden">
-              <div 
-                className="w-full h-full bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltfdd6c97efcd586d1/67d1e85da4b93f29fd09bcd0/montreal-4113307-Header_Desktop.jpg')`
-                }}
-              />
-              <div className="absolute inset-0 bg-black/30 flex items-end">
-                <div className="p-4">
-                  <h3 className="text-white font-bold text-lg">Old Montreal</h3>
-                  <p className="text-gray-200 text-sm">Historic cobblestone streets</p>
-                </div>
-              </div>
-            </div>
+      
+      {/* Featured Recommendation */}
+      <div className="card bg-gradient-to-r from-orange-50 to-orange-100 border-orange-200">
+        <div className="text-center space-y-4">
+          <div className="card-icon mx-auto" style={{background: 'linear-gradient(135deg, rgba(255, 128, 0, 0.2) 0%, rgba(255, 153, 51, 0.3) 100%)', color: 'var(--brand-primary)'}}>
+            ⭐
           </div>
-          <div className="space-y-3">
-            <ul className="space-y-2 text-gray-300">
-              <li>• Old Montreal (Vieux-Montréal) - cobblestone streets and historic architecture</li>
-              <li>• Notre-Dame Basilica - stunning Gothic Revival architecture</li>
-              <li>• Mount Royal Park - panoramic city views</li>
-              <li>• Montreal Museum of Fine Arts</li>
-              <li>• Biodome and Olympic Stadium</li>
-              <li>• Jean-Talon Market - local foods and produce</li>
-              <li>• Underground City (RESO) - extensive underground network</li>
-            </ul>
-          </div>
+          <h3 className="font-display text-xl font-semibold">
+            Don&apos;t Miss: Old Montreal
+          </h3>
+          <p className="opacity-75 max-w-2xl mx-auto">
+            Take a stroll through the cobblestone streets of Old Montreal, where European charm meets North American energy. 
+            Perfect for a pre-race dinner or post-race celebration!
+          </p>
         </div>
-      </div>
-
-      {/* Food & Drink */}
-      <div className="mclaren-card space-y-4">
-        <h2 className="text-xl font-bold text-white text-center">Food & Drink</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-3">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto">
-              <span className="text-2xl">🍟</span>
-            </div>
-            <h3 className="text-center font-semibold text-white">Must-Try Montreal Foods</h3>
-          </div>
-          <ul className="space-y-2 text-gray-300">
-            <li>• Poutine at La Banquise or Chez Claudette</li>
-            <li>• Montreal-style bagels at St-Viateur or Fairmount</li>
-            <li>• Smoked meat at Schwartz&apos;s Deli</li>
-            <li>• Craft breweries in Mile End and Plateau neighborhoods</li>
-            <li>• French cuisine in Old Montreal</li>
-            <li>• Sugar shacks (cabanes à sucre) for maple syrup treats</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Day Trips */}
-      <div className="mclaren-card space-y-4">
-        <h2 className="text-xl font-bold text-white text-center">Day Trips</h2>
-        <ul className="space-y-2 text-gray-300">
-          <li>• Quebec City (3-hour drive) - European charm and history</li>
-          <li>• Ottawa (2-hour drive) - Canada&apos;s capital city</li>
-          <li>• Laurentian Mountains - scenic drives and outdoor activities</li>
-          <li>• Eastern Townships - wine country and charming villages</li>
-        </ul>
       </div>
     </div>
   );

@@ -57,7 +57,7 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {/* Stay Info Card */}
           <div className="card group">
             <div className="card-icon card-icon-f1">
@@ -87,6 +87,22 @@ export default function Home() {
             </p>
             <Link href="/things-to-do" className="btn btn-primary w-full">
               Explore Montreal
+            </Link>
+          </div>
+          
+          {/* Interactive Schedule Card */}
+          <div className="card group">
+            <div className="card-icon card-icon-f1">
+              📅
+            </div>
+            <h3 className="font-display text-xl font-semibold mb-3">
+              Interactive Schedule
+            </h3>
+            <p className="text-sm opacity-75 mb-6 leading-relaxed">
+              Plan our F1 weekend together with our interactive schedule builder and event coordination.
+            </p>
+            <Link href="/itinerary" className="btn btn-primary w-full">
+              Plan Schedule
             </Link>
           </div>
           
