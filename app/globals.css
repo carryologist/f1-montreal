@@ -1,54 +1,258 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-/* McLaren F1 Theme Styles */
-
-/* Navigation Links */
-.nav-link {
-  @apply text-white/80 hover:text-orange-500 transition-colors font-medium px-3 py-2 rounded-lg hover:bg-white/5;
+:root {
+  /* F1 Montreal Travel-Inspired Color Palette */
+  --background: #fefefe;
+  --foreground: #1a1a1a;
+  --surface: #ffffff;
+  --surface-secondary: #f8fafc;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  
+  /* F1 Brand Colors - McLaren Orange Theme */
+  --brand-primary: #ff8000; /* McLaren Papaya Orange */
+  --brand-secondary: #ff9933; /* Lighter Orange */
+  --brand-accent: #0ea5e9; /* F1 Blue */
+  --brand-coral: #ff6b6b; /* Coral */
+  --brand-sage: #10b981; /* Sage green */
+  
+  /* F1 Gradients */
+  --gradient-f1: linear-gradient(135deg, #ff8000 0%, #ff9933 100%);
+  --gradient-racing: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(255, 128, 0, 0.9) 0%, rgba(255, 153, 51, 0.8) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-f1: 0 8px 32px rgba(255, 128, 0, 0.15);
+  
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Primary CTA Button - McLaren Orange */
-.primary-cta-button {
-  @apply bg-orange-500 hover:bg-white text-white hover:text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-orange-500 hover:border-orange-500;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-brand: var(--brand-primary);
+  --color-brand-2: var(--brand-secondary);
+  --color-accent: var(--brand-accent);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-/* Secondary CTA Button - White */
-.secondary-cta-button {
-  @apply bg-white hover:bg-orange-500 text-orange-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-white hover:border-orange-500;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --surface: #1e293b;
+    --surface-secondary: #334155;
+    --border: #475569;
+    --border-light: #64748b;
+    
+    /* Dark mode card gradient */
+    --gradient-card: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.9) 100%);
+  }
 }
 
-/* Small CTA Buttons for Tiles */
-.primary-cta-button-small {
-  @apply bg-orange-500 hover:bg-white text-white hover:text-orange-500 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-orange-500 hover:border-orange-500 inline-block;
+/* Base Styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Feature Tiles - Fixed Animation */
-.feature-tile {
-  @apply bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 hover:shadow-2xl hover:scale-105;
+/* Typography Classes */
+.font-display {
+  font-family: var(--font-display);
 }
 
-/* McLaren Cards */
-.mclaren-card {
-  @apply bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 shadow-lg;
+.text-gradient {
+  background: var(--gradient-f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* McLaren Gradient Text */
-.mclaren-gradient-text {
-  @apply bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent;
+.text-gradient-hero {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ff8000 30%,
+    #ff9933 70%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-/* McLaren Input Styles */
-.mclaren-input {
-  @apply bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 focus:outline-none transition-colors;
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-/* Smooth Animations */
-@keyframes fadeInUp {
+/* Hero Section */
+.image-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Badge Components */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-white {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  backdrop-filter: blur(8px);
+}
+
+.badge-primary {
+  background: var(--gradient-f1);
+  color: white;
+}
+
+/* Button Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-hero-primary {
+  background: var(--gradient-f1);
+  color: white;
+  box-shadow: var(--shadow-f1);
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 128, 0, 0.25);
+}
+
+.btn-hero-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--gradient-f1);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Components */
+.card {
+  background: var(--gradient-card);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon-f1 {
+  background: linear-gradient(135deg, rgba(255, 128, 0, 0.1) 0%, rgba(255, 153, 51, 0.2) 100%);
+  color: var(--brand-primary);
+}
+
+/* Animation Classes */
+@keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -56,8 +260,52 @@
   }
 }
 
-.animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out;
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
 }
 
 /* Custom Scrollbar */
@@ -66,19 +314,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: var(--surface-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f97316;
+  background: var(--brand-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ea580c;
-}
-
-/* Ensure proper spacing for fixed header */
-body {
-  padding-top: 80px;
+  background: var(--brand-secondary);
 }
